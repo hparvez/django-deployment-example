@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<!-- Use the template in base.html -->
+{% extends "basic_app/base.html" %}
+
+<!-- this bit won't be inherited -->
+  {% block body_block %}
+    <h1>Welcome to Other</h1>
+    <h2>This is an example of template inheritance</h2>
+  {% endblock %}

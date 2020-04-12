@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<!-- Use the template in base.html -->
+{% extends "basic_app/base.html" %}
+<!-- Load custom filer template -->
+{% load my_extras %}
+
+
+  <!-- This bit won't be inherited -->
+  {% block body_block %}
+    <h1>Welcome to Index</h1>
+    <!-- Capitalise text -->
+    <h2>{{ text | cut:"Hello" }}</h2>
+    <!-- Add 99 to number -->
+    <h2>{{ number | add:"99" }}</h2>
+
+  {% endblock %}
