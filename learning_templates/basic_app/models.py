@@ -7,7 +7,7 @@ class UserProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     # Additional fields
     portfolio_site = models.URLField(blank=True)
-    profile_pic = models.ImageField(upload="profile_pics", blank=True)
+    profile_pic = models.ImageField(upload_to="profile_pics", blank=True)
 
     # When printing a model, we'll return the username
     def __str__(self):
