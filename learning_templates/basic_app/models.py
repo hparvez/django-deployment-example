@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class UserProfileInfo(models.Model):
     # Create one-to-one mapping with User class
-    user = models.OnetoOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     # Additional fields
     portfolio_site = models.URLField(blank=True)
     profile_pic = models.ImageField(upload="profile_pics", blank=True)
